@@ -1,6 +1,4 @@
-local M = {}
-
-function M.lazygit()
+return function()
 	if vim.fn.executable("lazygit") == 1 then
 		vim.cmd([[tab split +term\ lazygit]])
 		vim.keymap.set("n", "q", function()
@@ -19,5 +17,3 @@ function M.lazygit()
 		echohl NONE]])
 	end
 end
-
-return M
